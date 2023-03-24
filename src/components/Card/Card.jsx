@@ -16,10 +16,9 @@ const Card = (props) => {
 
                 {precio ? <h4 className="card-text">${precio}</h4> : null}
                 {!link_to || <Link to={`${link_to}${id}`} className='btn btn-info'>{link_boton}</Link>} {/* por props hay que pasar la url de la ruta, si no se escirbe nada el boton no aparece */}
-                <br />
-                <br />
-                {!contador || <Counter />}
-                <br />
+
+                {!contador || <Counter producto={{ img, titulo, descripcion, id, precio }} />} {/* le paso por la prop "producto" del <Counter/> cada valor que le puse a la props <Card/> en el HOME */}
+
                 {quitar_boton || <Button className={!boton_className || "btn btn-primary"} text_button={boton_nombre} onClick={onClick}></Button>}
             </div>
         </div>

@@ -22,10 +22,12 @@ const Home = () => {
             No_link
             link_to="/detalleproducto/"
             link_boton="+Info"
-            boton_className
+
             contador
-            boton_nombre="Agregar al Carrito"
-            onClick={() => agregarAlCarrito({ titulo, precio, imagen, id })} // al hacer click guarda la data que pido en el state
+            quitar_boton
+          // boton_className
+          // boton_nombre="Agregar al Carrito"
+          // onClick={() => agregarAlCarrito({ titulo, precio, imagen, id })} // al hacer click guarda la data que pido en el state
           />
         ))}
 

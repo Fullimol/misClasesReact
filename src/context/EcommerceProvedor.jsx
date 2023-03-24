@@ -45,7 +45,7 @@ const EcommerceProvedor = (props) => {
 
     return (
 
-        <EcommerceContext.Provider value={{ productos, agregarAlCarrito, carrito, eliminarDelCarrito}}> {/* en "value" ponemos cada valor que deseemos compartir con otros componentes */}
+        <EcommerceContext.Provider value={{ productos, agregarAlCarrito, carrito, eliminarDelCarrito }}> {/* en "value" ponemos cada valor que deseemos compartir con otros componentes */}
             {children}  {/* esto es para que al llamar a este componente, dentro del mismo pongamos los demás (hijos) a los que vamos a compartir nuestro valores*/}
         </EcommerceContext.Provider>
     )

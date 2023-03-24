@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { EcommerceContext } from '../context/EcommerceProvedor'
+import { v4 as uuidv4 } from 'uuid';  // Esta función genera número de ID aleatorios
 
 const CarritoContainer = () => {
     const { carrito, eliminarDelCarrito } = useContext(EcommerceContext)
-
+    console.log(carrito)
     return (
         <div>
             {/* si no hay carrito.length (osea...esta vacío), entonces, devolveme un <H1>, sino devolveme lo siguente del : */}
@@ -12,17 +13,18 @@ const CarritoContainer = () => {
                 <div className="card mb-3 container" style={{ width: "400px" }}>
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <img src={product.imagen} className="img-fluid rounded-start" />
+                            <img src={product.img} className="img-fluid rounded-start" />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <p className="card-text">#id{product.id}</p> 
-                                
+                                <p className="card-text">#id{product.id}</p>
+                                <p>Cantidad {product.contador}</p>
                                 <h5 className="card-title">{product.titulo}</h5>
                                 <h4 className="card-text">${product.precio}</h4>
                             </div>
                             <Link to={`/detalleproducto/${product.id}`} className='btn btn-info'>Detalle</Link>
                             <button className="btn btn-danger m-1" onClick={() => eliminarDelCarrito(product)}>Borrar</button>
+
                         </div>
                     </div>
                 </div>
