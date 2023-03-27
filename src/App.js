@@ -5,9 +5,6 @@ import Usuarios from './views/UsuariosAPI/Usuarios';
 import Rutas from './routes/Rutas';
 import EcommerceProvedor from './context/EcommerceProvedor';
 
-
-
-
 function App() {
   const [showUsers, setShowUsers] = useState(false) // ver/ocultar usuarios
   return (

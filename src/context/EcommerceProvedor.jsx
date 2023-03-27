@@ -20,8 +20,6 @@ const EcommerceProvedor = (props) => {
         setCarrito(quitarItem) // Luego se guarda el nuevo estado del carrito con el array con los items eliminados
     }
 
-
-
     const productos = [
         {
             id: 1,

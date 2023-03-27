@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import Card from '../components/Card/Card'
 import { EcommerceContext } from '../context/EcommerceProvedor'
 
-
 const Home = () => {
   const { productos, agregarAlCarrito } = useContext(EcommerceContext) //Con este Hook le decimos que vamos a tomar los valores X dentro del componente "EcommerceContext"
 
