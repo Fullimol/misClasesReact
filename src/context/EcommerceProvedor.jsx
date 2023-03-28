@@ -1,24 +1,27 @@
 //creamos este componente donde va a enviar mediante EXPORT la data a usar en otro componente
 
 import { createContext, useState } from 'react'
+import useCarrito from '../Hooks/useCarrito'
 
 export const EcommerceContext = createContext('')
 
 const EcommerceProvedor = (props) => {
     const { children } = props
 
-    const [carrito, setCarrito] = useState([])
+    const {carrito, agregarAlCarrito, eliminarDelCarrito} = useCarrito() 
+
+    // const [carrito, setCarrito] = useState([])
 
 
-    const agregarAlCarrito = (product) => {
-        setCarrito([...carrito, product]) //hace una copia de mi "carrito" (en caso de ya tener datos almacenados", y luego le agrega el nuevo dato)
-        alert("Agregado al carrito")
-    }
+    // const agregarAlCarrito = (product) => {
+    //     setCarrito([...carrito, product]) //hace una copia de mi "carrito" (en caso de ya tener datos almacenados", y luego le agrega el nuevo dato)
+    //     alert("Agregado al carrito")
+    // }
 
-    const eliminarDelCarrito = (product) => {
-        const quitarItem = carrito.filter(item => item.id !== product.id) //Se filtra la lista carrito usando "filter" y se compara el ID de cada objeto (item) con el ID del objeto que se quiere eliminar(donde hago click). Los objetos que NO tienen el mismo ID se mantienen en la lista filtrada, y los que tienen el mismo ID se quitan.
-        setCarrito(quitarItem) // Luego se guarda el nuevo estado del carrito con el array con los items eliminados
-    }
+    // const eliminarDelCarrito = (product) => {
+    //     const quitarItem = carrito.filter(item => item.id !== product.id) //Se filtra la lista carrito usando "filter" y se compara el ID de cada objeto (item) con el ID del objeto que se quiere eliminar(donde hago click). Los objetos que NO tienen el mismo ID se mantienen en la lista filtrada, y los que tienen el mismo ID se quitan.
+    //     setCarrito(quitarItem) // Luego se guarda el nuevo estado del carrito con el array con los items eliminados
+    // }
 
     const productos = [
         {

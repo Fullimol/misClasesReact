@@ -1,8 +1,7 @@
 import { useState } from 'react'
 
-const useContador = (props) => {
-    const { valorInicial } = props
-    const [contador, setContador] = useState(valorInicial)
+const useContador = ( initialValue = 1) => {
+    const [contador, setContador] = useState(initialValue)
 
     const handleSumar = () => setContador(contador + 1);
 

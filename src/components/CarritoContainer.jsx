@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { EcommerceContext } from '../context/EcommerceProvedor'
+import Counter from '../components/Counter/Counter'
 import { v4 as uuidv4 } from 'uuid';  // Esta función genera número de ID aleatorios
 
 const CarritoContainer = () => {
@@ -18,9 +19,11 @@ const CarritoContainer = () => {
                         <div className="col-md-8">
                             <div className="card-body">
                                 <p className="card-text">#id{product.id}</p>
-                                <p>Cantidad {product.contador}</p>
+                                <p>Cantidad:</p>
+
+                                <Counter sinBotonAgregar cantidad={product.contador}/>
                                 <h5 className="card-title">{product.titulo}</h5>
-                                <h4 className="card-text">${product.precio}</h4>
+                                <h4 className="card-text">${product.precio} c/u</h4>
                             </div>
                             <Link to={`/detalleproducto/${product.id}`} className='btn btn-info'>Detalle</Link>
                             <button className="btn btn-danger m-1" onClick={() => eliminarDelCarrito(product)}>Borrar</button>
