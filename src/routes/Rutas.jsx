@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom' // ESTA DEPENDENCIA HAY QUE INSTALARLA
 import Counter from '../components/Counter/Counter'
 import Home from '../views/Home'
 import Usuarios from '../views/UsuariosAPI/Usuarios';

@@ -13,10 +13,13 @@ const useCarrito = () => {
         setCarrito(quitarItem) // Luego se guarda el nuevo estado del carrito con el array con los items eliminados
     }
 
+    const verificarCarrito = (id) => carrito.some((item) => item.id == id) // verifica si alguno de los objetos en el array tiene una propiedad id igual al valor del parámetro id. Si un determinado producto con el id especificado ya ha sido agregado al carrito devuelve TRUE.
+
     return {
         carrito,
         agregarAlCarrito,
-        eliminarDelCarrito
+        eliminarDelCarrito,
+        verificarCarrito
     }
 }
 

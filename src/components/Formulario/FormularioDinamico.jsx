@@ -11,8 +11,8 @@ const FormularioDinamico = (props) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setForm({
-            ...form,
-            [name]: value
+            ...form, // copia todos los valores actuales del objeto form utilizando el operador spread (...).
+            [name]: value // sobrescribe el valor del campo de formulario que ha cambiado con el nuevo valor value, utilizando el nombre del campo de formulario name como clave.
         })
     }
 

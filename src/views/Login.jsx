@@ -7,9 +7,9 @@ const Login = () => {
     //Formulario Dinamico
     const [showLogin, setShowLogin] = useState(false)
 
-    // Es la funcion que se ejecuta al enviar el Formulario Dinamico
+    // Es la funcion que se ejecuta al enviar el Formulario Dinamico. 
     const handleSubmit = (e, data) => {
-        e.preventDefault();
+        e.preventDefault(); //evitamos que envíe la info y recargue la página
         console.log(data)
     }
     return (
